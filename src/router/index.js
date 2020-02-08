@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+const ArticleList = () => import('@/views/adanana/blog/articleList')
+const creatArticlePage =()=>import('@/views/adanana/blog/creatArticlePage')
+const blogIndex =() => import('@/views/adanana/blog/blogIndex')
 // Containers
 const TheContainer = () => import('@/containers/TheContainer')
-
 // Views
 const Dashboard = () => import('@/views/Dashboard')
 
@@ -70,15 +72,20 @@ function configRoutes () {
   return [
     {
       path: '/',
-      redirect: '/pages/login',
-      name: 'Home',
+      //redirect: '/pages/login',
+      name: '首页',
       component: TheContainer,
-      children: [
+      children: [ 
+          {
+            path: '/blog/blogIndex',
+            name: '假装是首页',
+            component: blogIndex
+          },
         {
-          path: 'dashboard',
-          name: 'Dashboard',
-          component: Dashboard
-        },
+          path: '/blog/creatArticlePage',
+          name: '文章发布',
+          component: creatArticlePage
+        }, 
         {
           path: 'theme',
           redirect: '/theme/colors',
@@ -99,6 +106,12 @@ function configRoutes () {
             }
           ]
         },
+		// {
+  //         path: 'beacon/beacon',
+  //         name: 'Beacon',
+  //         component: Beacon
+		// },
+		
         {
           path: 'charts',
           name: 'Charts',

@@ -4,33 +4,55 @@ export default [
     _children: [ 
       {
         _name: 'CSidebarNavItem',
-        name: 'Dashboard',
-        to: '/dashboard',
+        name: '假装是首页',
+        to: '/blog/blogIndex',
         icon: 'cil-speedometer',
-        badge: {
-          color: 'primary',
-          text: 'NEW'
-        }
+        // badge: {
+        //   color: 'primary',
+        //   text: 'NEW'
+        // }
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Theme']
+        _children: ['我也不知道叫啥好']
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Colors',
-        to: '/theme/colors',
+        name: '发布',
+        to: '/blog/creatArticlePage',
         icon: 'cil-drop'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Typography',
+        name: '聊天室',
+        to: '/blog/chatRoom',
+        icon: 'cil-drop'
+      }, 
+     {
+        _name: 'CSidebarNavItem',
+        name: '你的两三件事',
         to: '/theme/typography',
         icon: 'cil-pencil'
       },
+	  {
+	     _name: 'CSidebarNavItem',
+	     name: '游戏',
+	     to: '/theme/typography',
+	     icon: 'cil-pencil'
+	   },
+      {
+        _name: 'CSidebarNavItem',
+        name: '设置',
+        to: '/theme/typography',
+        icon: 'cil-pencil'
+      },
+      
+      
+      
+      
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Components']
+        _children: ['coreUI自带的展示']
       },
       {
         _name: 'CSidebarNavDropdown',

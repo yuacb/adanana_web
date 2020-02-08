@@ -75,20 +75,37 @@
 			//登陆
 			fx_login: function(e) {
 				//发送 post 请求
-				this.$http.post("http://127.0.0.1:8080/app/login", this.$data, {
-						emulateJSON: true
-					})
-					.then(function(res) {
-						debugger
-						if(res.body.code == "S"){
-							this.$router.push({name:"Dashboard"});
-						}else{
-							//登陆错误
-							this.loginFail = "true";
-						} 
-					}, function(res) {
-						console.log(res.status);
-					}, function(res) {});
+				this.axios.post("/app/login",this.$data)
+				.then(response => { 
+				if(response.data.code == "S"){
+					debugger;
+					this.$router.push({name:"/dashboard"});
+				}else{
+					//登陆错误
+					//this.loginFail = "true";
+				} 
+					// if(response.data.code == "S"){
+					// 	debugger;
+					// 	this.$router.push({name:"/dashboard"});
+					// }else{
+					// 	//登陆错误
+					// 	//this.loginFail = "true";
+					// } 
+					}) 
+				// this.$http.post(process.env.VUE_APP_HOST+"/app/login", this.$data, {
+				// 		emulateJSON: true
+				// 	})
+				// 	.then(function(res) {
+				// 		debugger
+				// 		if(res.body.code == "S"){
+				// 			this.$router.push({name:"Dashboard"});
+				// 		}else{
+				// 			//登陆错误
+				// 			this.loginFail = "true";
+				// 		} 
+				// 	}, function(res) {
+				// 		console.log(res.status);
+				// 	}, function(res) {});
 			}
 		}
 	}

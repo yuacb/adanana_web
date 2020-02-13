@@ -40,7 +40,7 @@
     // } from '../yourModulePath/someQuillModule.js'
     //Quill.register('modules/someModule', someModule)
     export default {
-        name: 'creatArticlePage',
+        name: 'ArticleAdd',
         data() {
             return {
                 content: '',

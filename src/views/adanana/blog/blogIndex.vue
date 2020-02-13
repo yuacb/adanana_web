@@ -4,9 +4,9 @@
  
  
 <script>
-    import articleList from '../blog/articleList.vue'
+    import articleList from '../blog/article/ArticleList.vue'
     export default {
-      name: 'blogIndex',
+      name: 'BlogIndex',
       components: {
         articleList, 
       }

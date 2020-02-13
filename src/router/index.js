@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const ArticleList = () => import('@/views/adanana/blog/articleList')
-const creatArticlePage =()=>import('@/views/adanana/blog/creatArticlePage')
-const blogIndex =() => import('@/views/adanana/blog/blogIndex')
+const BlogIndex =() => import('@/views/adanana/blog/BlogIndex')
+const ArticleList = () => import('@/views/adanana/blog/article/ArticleList')
+const ArticleAdd =()=>import('@/views/adanana/blog/article/ArticleAdd')
+const ArticleDetails =() =>import('@/views/adanana/blog/article/ArticleDetails')
 // Containers
 const TheContainer = () => import('@/containers/TheContainer')
 // Views
@@ -72,20 +73,25 @@ function configRoutes () {
   return [
     {
       path: '/',
-      //redirect: '/pages/login',
+      redirect: '/blog/blogIndex',
       name: '首页',
       component: TheContainer,
       children: [ 
           {
             path: '/blog/blogIndex',
             name: '假装是首页',
-            component: blogIndex
+            component: BlogIndex
           },
         {
-          path: '/blog/creatArticlePage',
+          path: '/blog/articleAdd',
           name: '文章发布',
-          component: creatArticlePage
+          component: ArticleAdd
         }, 
+		{
+		  path: '/blog/ArticleDetails',
+		  name: '文章详情',
+		  component: ArticleDetails
+		}, 
         {
           path: 'theme',
           redirect: '/theme/colors',

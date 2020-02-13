@@ -77,12 +77,11 @@
 				//发送 post 请求
 				this.axios.post("/app/login",this.$data)
 				.then(response => { 
-				if(response.data.code == "S"){
-					debugger;
-					this.$router.push({name:"/dashboard"});
+				if(response.data.code == "S"){ 
+					this.$router.push({path:"/blog/blogIndex"});
 				}else{
 					//登陆错误
-					//this.loginFail = "true";
+					this.loginFail = "true";
 				} 
 					// if(response.data.code == "S"){
 					// 	debugger;

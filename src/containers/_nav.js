@@ -5,7 +5,7 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: '假装是首页',
-        to: '/blog/blogIndex',
+        to: '/blog/BlogIndex',
         icon: 'cil-speedometer',
         // badge: {
         //   color: 'primary',
@@ -19,32 +19,48 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: '发布',
-        to: '/blog/creatArticlePage',
+        to: '/blog/ArticleAdd',
         icon: 'cil-drop'
       },
       {
         _name: 'CSidebarNavItem',
         name: '聊天室',
         to: '/blog/chatRoom',
-        icon: 'cil-drop'
+        icon: 'cil-drop',
+        badge: {
+            color: 'primary',
+            text: '未开发'
+		}
       }, 
      {
         _name: 'CSidebarNavItem',
         name: '你的两三件事',
         to: '/theme/typography',
-        icon: 'cil-pencil'
+        icon: 'cil-pencil',
+        badge: {
+            color: 'primary',
+            text: '未开发'
+		}
       },
 	  {
-	     _name: 'CSidebarNavItem',
-	     name: '游戏',
-	     to: '/theme/typography',
-	     icon: 'cil-pencil'
+         _name: 'CSidebarNavItem',
+        name: '游戏',
+        to: '/theme/typography',
+        icon: 'cil-pencil',
+        badge: {
+            color: 'primary',
+            text: '未开发'
+         }
 	   },
       {
         _name: 'CSidebarNavItem',
         name: '设置',
         to: '/theme/typography',
-        icon: 'cil-pencil'
+        icon: 'cil-pencil',
+		badge: {
+		    color: 'primary',
+		    text: '未开发'
+		}
       },
       
       
